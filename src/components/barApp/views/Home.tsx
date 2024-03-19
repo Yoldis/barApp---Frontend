@@ -5,8 +5,8 @@ import { useAuthContext } from '../../../context/useContext';
 
 export const Home = () => {
   const{user} = useAuthContext();
+  
  
-
   return (
     <section>
       <Routes>

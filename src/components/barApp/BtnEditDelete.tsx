@@ -5,8 +5,8 @@ import { Alert, Buttom } from "."
 
 
 
-export const BtnEditDelete = <T extends BtnEditDeleteProps>({callbackDelete, callbackEdit, children, 
-  openModal, id, nombre, contenidoModal, isLoading, enaobleEdit = true}:T) => {
+export const BtnEditDelete = ({callbackDelete, callbackEdit, children, 
+  openModal, id, nombre, contenidoModal, isLoading, enaobleEdit = true}:BtnEditDeleteProps) => {
   return (
     <div className="flex items-center gap-x-2.5">
       {children}

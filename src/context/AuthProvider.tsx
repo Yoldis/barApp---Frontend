@@ -7,7 +7,7 @@ import { LoginInterface, UserAuth } from "../interfaces/authInterface";
 
 export const AuthProvider = ({children}:PropsWithChildren) => {
   const [user, setuser] = useState<UserAuth>({session:null});
-  const [checking, setChecking] = useState<string|null>(null);
+  const [checking, setChecking] = useState<string|null>('checking');
   const [loadingPassword, setLoadingPassword] = useState<boolean>(false);
   // const [error, setError] = useState();
   

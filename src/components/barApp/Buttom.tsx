@@ -2,10 +2,10 @@ import { FaSave } from "react-icons/fa";
 import { ButtomProps } from "../../interfaces/barInterface"
 
 
-export const Buttom = <T extends ButtomProps>({
+export const Buttom = ({
     icon = <FaSave/>, name = 'Guardar', btnColor = 'bg-primaryColor', btnSize = 'btn-sm', 
     direction = 'float-end mt-2', isLoading, onClickBtn, colorText ='text-white', disabled = false
-}:T) => {
+}:ButtomProps) => {
   
   return (
     <div className={`${direction}`}>

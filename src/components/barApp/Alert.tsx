@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { AlertProps } from "../../interfaces/barInterface";
 
 
-export const Alert = <T extends AlertProps>({buttom, children, title, id, isloading, onResetForm}:T) => {
+export const Alert = ({buttom, children, title, id, isloading, onResetForm}:AlertProps) => {
 
     const refBtnClose = useRef<HTMLButtonElement>(null);
 

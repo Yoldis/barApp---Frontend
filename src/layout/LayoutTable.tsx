@@ -7,7 +7,7 @@ interface Table {
 }
 
 
-export const LayoutTable = <T extends Table>({thHeader, children}:T) => {
+export const LayoutTable = ({thHeader, children}:Table) => {
 
   return (
   <div className="overflow-x-auto">

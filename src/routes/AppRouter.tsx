@@ -1,16 +1,15 @@
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import { Home } from '../components/barApp';
 import { Login } from '../components/auth/Login';
-import { useEffect } from 'react';
 import { useAuthContext } from '../context/useContext';
+import { useEffect } from 'react';
 
 export const AppRouter = () => {
   const{checking, startCheckingSession} = useAuthContext();
-    
-    useEffect(() => {
-      startCheckingSession();
-    }, []);
-    
+
+  useEffect(() => {
+    startCheckingSession();
+  }, []);
 
     if(checking === 'checking'){
       return (
@@ -20,15 +19,18 @@ export const AppRouter = () => {
       )
     }
 
-    
+  console.log(checking)
+
   return (
     <Routes>
       {checking === "authenticated" ? (
           <Route path="/*" element={<Home />} />
       ) : (
+        <>
           <Route path="/auth/login" element={<Login />} />
+          <Route path="/*" element={<Navigate to={"/auth/login"} />} />
+        </>
           )}
-          {/* <Route path="/*" element={<Navigate to={"/auth/login"} />} /> */}
     </Routes>
   );
 }

@@ -4,10 +4,10 @@ import { Buttom } from ".";
 import { useEffect, useRef } from "react";
 
 
-export const Modal = <T extends ModalProps>({
+export const Modal = ({
     titleHeader, titleBtn, btnColor = 'primaryColor',  icon = <FaPlus/>, children, onResetForm, onSaveData,
     isLoading, error, setError, openModal
-}:T) => {
+}:ModalProps) => {
   
     const refBtnClose = useRef<HTMLButtonElement>(null);
   

@@ -4,7 +4,7 @@ import { PagesProps } from "../interfaces/barInterface";
 import { NavBar } from "../components/barApp";
 
 
-export const LayoutPages = <T extends PagesProps>({routes ,sidebar, children}:T) => {
+export const LayoutPages = ({routes ,sidebar, children}:PagesProps) => {
   const{toogleSidebar} = useBarContext();
 
 
